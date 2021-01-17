@@ -1,0 +1,10 @@
+<h1>Cartelera</h1>
+
+<div class="row" *ngIf="moviesSlidesShow.length> 0">
+    <div class="col">
+        <app-slideshow [carteleras]="moviesSlidesShow"></app-slideshow>
+    </div>
+</div>
+
+<h2 class="mt-5">Ultimas Peliculas</h2>
+<app-peliculas-poster-grid *ngIf="movies.length> 0" [peliculas]="movies"></app-peliculas-poster-grid>

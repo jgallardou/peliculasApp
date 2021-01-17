@@ -1,0 +1,11 @@
+<h2>Buscar peliculas: <small class="text-capitalize">{{termino}}</small> </h2>
+<hr color="white">
+<div class="row" *ngIf="peliculas.length>0; else notSearch">
+  <div class="col">
+    <app-peliculas-poster-grid [peliculas]="peliculas"></app-peliculas-poster-grid>
+  </div>
+</div>
+
+<ng-template #notSearch>
+  <h5>Lo sentimos :(, pero no hemos encontrado la pelicula: {{termino}}</h5>
+</ng-template>
